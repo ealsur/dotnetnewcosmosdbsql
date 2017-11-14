@@ -1,0 +1,47 @@
+{
+"author": "Ealsur",
+"classifications": [ "Web" ],
+"name": "Cosmos DB SQL Quickstart",
+"identity": "CosmosDB.SQL",  
+"shortName": "cosmosdb-sql", 
+"tags": {
+    "language": "C#"  
+},
+"groupIdentity": "cosmosdb",
+"sourceName": "dotnetnewcosmos",  
+"preferNameDirectory" : "true",
+"symbols":{
+        "account": {
+            "type": "parameter",
+            "replaces":"{cosmosdbaccountname}",
+			"isRequired": true
+        },
+        "key": {
+            "type": "parameter",
+            "replaces":"{cosmosdbaccountkey}",
+			"isRequired": true
+        },
+        "database": {
+            "type": "parameter",
+            "replaces":"{cosmosdbdatabase}",
+			"defaultValue": "ToDoList"
+        },
+        "collection": {
+            "type": "parameter",
+			"replaces":"{cosmosdbcollection}",
+            "replaces":"Items"
+        }
+
+	},
+"postActions": [
+{
+  "condition": "(!skipRestore)",
+  "description": "Restore NuGet packages required by this project.",
+  "manualInstructions": [
+	{ "text": "Run 'dotnet restore'" }
+  ],
+  "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+  "continueOnError": true
+}
+]
+}
