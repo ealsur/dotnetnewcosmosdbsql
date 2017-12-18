@@ -29,7 +29,7 @@
         "collection": {
             "type": "parameter",
             "replaces":"{cosmosdbcollection}",
-            "replaces":"Items"
+            "defaultValue":"Items"
         }
 
 },
