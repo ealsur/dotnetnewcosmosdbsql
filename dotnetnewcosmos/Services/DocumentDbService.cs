@@ -22,9 +22,9 @@
             _settings = new CosmosDbSettings(configuration);
             _collectionUri = GetCollectionLink();
             //See https://azure.microsoft.com/documentation/articles/documentdb-performance-tips/ for performance tips
-            _dbClient = new DocumentClient(_settings.DatabaseUri, _settings.DatabaseKey, new ConnectionPolicy());
-
-            
+            _dbClient = new DocumentClient(_settings.DatabaseUri, _settings.DatabaseKey, new ConnectionPolicy() {
+                UserAgentSuffix = "dotnetnew"
+            });
         }
 
         public async Task InitializeAsync()
